@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- wrapper -->
+    <div class="container bg-gradient-to-r from-violet-500 to-fuchsia-500
+    h-screen w-screen flex justify-center items-center
+    ">
+        <!-- for container -->
+
+       <div class="p-5 bg-slate-50 backdrop-blur-3xl  rounded-lg scale-110 bg-opacity-50 flex flex-col justify-center  gap-3">
+
+            <h1 class="text-[1.7rem] font-bold relative -top-2">Password Generator</h1>
+        <div class="display-container flex justify-center items-center gap-2">
+            <input readonly placeholder="Password" class="display backdrop-blur-3xl  rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 p-2" data-passwordDisplay>
+            <button class="display bg-gradient-to-r from-purple-500 to-pink-500 bg-opacity-10 rounded-md p-[8px] overflow-hidden">
+                <span data-copyMsg></span>
+                <img src="https://codehelp-password-generator.netlify.app/assets/copy.svg" alt="copy" width="23" height="23"  data-copy>
+            </button>
+        </div>
+
+        <div class="input-container">
+
+            <div class="lenght-container flex justify-between p-1">
+                <p>Password Length</p>
+                <p data-lengthNumber>0</p>
+
+            </div>
+
+            <!-- slider -->
+
+            <input type="range" min="1" max="28" class="slider w-[100%] p-1 
+            h-[25px] outline-none opacity-70 transition-opacity bg-green-600" step="1" data-lengthSlider>
+
+            <!-- checkboxes -->
+
+            <div class="p-1 checkboxo">
+                <div>
+                <input type="checkbox" id="uppercase">
+                <label for="uppercase">Include Uppercase Letters</label>
+            </div>
+            <div>
+                <input type="checkbox" id="lowercase" >
+                <label for="lowercase">Include Lowercase Letters</label>
+            </div>
+            <div>
+                <input type="checkbox" id="numbers">
+                <label for="numbers">Include Numbers</label>
+            </div>
+            <div>
+                <input type="checkbox" id="symbols">
+                <label for="symbols">Include Symbols</label>
+            </div>
+            </div>
+            
+
+
+            <!-- strength section -->
+
+            <div class="strength-container flex justify-between justify-center items-center p-1">
+                <p>Strength</p>
+                <div class="strengthInd h-4 w-4 rounded-full bg-red-600 shadow-md" data-indicator></div>
+            </div>
+
+            <!-- button to generate password -->
+
+            <div class="p-1 pt-4 flex justify-center">
+                <button id="btnn" class="bg-black hover:text-black hover:scale-[1.1] transition-transform hover:bg-gradient-to-r from-purple-500 to-pink-500 text-white w-[100%] generateButton p-2 rounded-md ">Generate Password</button>
+            </div>
+            
+
+        </div>
+       </div>
+        
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
